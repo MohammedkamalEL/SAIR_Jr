@@ -6,3 +6,4 @@ runs
 detection_output
 *.pt
 yolov8n.onnx
+GEN
