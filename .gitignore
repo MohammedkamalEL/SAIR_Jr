@@ -424,3 +424,8 @@ detection_output/
 # AI agent files
 CLAUDE.md
 .claude/
+
+# Module 5 Resources — PDFs are large, track only cover images
+5_GPT from scratch/Resources/*.pdf
+!5_GPT from scratch/Resources/*.jpg
+!5_GPT from scratch/Resources/*.png

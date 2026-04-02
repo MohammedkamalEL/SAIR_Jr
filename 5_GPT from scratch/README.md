@@ -211,6 +211,11 @@ No downloads required.
 │   ├── val_ids.bin                 # ~148K tokens (7%)
 │   └── test_ids.bin                # ~61K tokens (3%)
 ├── pipeline/                       # Modular production implementation
+├── Resources/
+│   ├── raschka_llm_from_scratch.pdf          # Primary textbook
+│   ├── raschka_llm_from_scratch_cover.jpg    # Book cover
+│   ├── raschka_llm_exercises.pdf             # Exercise companion
+│   └── attention_is_all_you_need.pdf         # Vaswani et al. 2017
 └── README.md
 ```
 
@@ -229,13 +234,62 @@ After completing this module you will be able to:
 
 ---
 
-## 📚 Recommended Reading
+## 📚 Resources
 
-| Resource | Why |
-|----------|-----|
-| [Attention Is All You Need](https://arxiv.org/abs/1706.03762) | The original transformer paper — read alongside Lecture 2 |
-| [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | GPT-3 paper — context for why this architecture matters |
-| [nanoGPT by Karpathy](https://github.com/karpathy/nanoGPT) | Reference implementation — compare after you finish the lectures |
+All materials are in `Resources/` — read in parallel with the lectures, not after.
+
+---
+
+### 📖 Primary Textbook — Read in Parallel
+
+<div align="center">
+
+<a href="Resources/raschka_llm_from_scratch.pdf">
+<img src="Resources/raschka_llm_from_scratch_cover.jpg" alt="Build a Large Language Model From Scratch — Sebastian Raschka" width="220"/>
+</a>
+
+**Build a Large Language Model (From Scratch)**  
+*Sebastian Raschka — Manning Publications, 2024*
+
+</div>
+
+This module is built around this book. Every lecture maps directly to a chapter:
+
+| Lecture | Book Chapter |
+|---------|-------------|
+| Lecture 1 — Data & Tokenization | Ch. 2: Working with text data |
+| Lecture 2 — Attention | Ch. 3: Coding attention mechanisms |
+| Lecture 3 — GPT Architecture | Ch. 4: Implementing a GPT model from scratch |
+| Lecture 4 — Training | Ch. 5: Pretraining on unlabeled data |
+| Lecture 5 — SFT: Classification | Ch. 6: Fine-tuning for classification |
+| Lecture 6 — SFT: Instruction Following | Ch. 7: Fine-tuning to follow instructions |
+
+Read each chapter **before** its lecture. The notebook is your hands-on implementation of what the book explains.
+
+---
+
+### 🧪 Exercise Book — Test Your Understanding
+
+<a href="Resources/raschka_llm_exercises.pdf">**LLM From Scratch — Exercise Companion**</a> *(same author)*
+
+After each lecture, work through the corresponding exercises. If you can answer them without looking at your notes, you own the material.
+
+---
+
+### 📄 Core Paper
+
+<a href="Resources/attention_is_all_you_need.pdf">**Attention Is All You Need**</a> — Vaswani et al., 2017
+
+The paper that started everything. Read it alongside Lecture 2 (Attention). The notation in your notebooks maps directly to the equations in this paper.
+
+---
+
+### 🔗 Additional References
+
+| Resource | When to Use |
+|----------|------------|
+| [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | After Lecture 4 — understand why scale matters |
+| [nanoGPT by Karpathy](https://github.com/karpathy/nanoGPT) | After finishing all lectures — compare implementations |
 
 ---
 
