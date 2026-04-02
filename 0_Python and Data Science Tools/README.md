@@ -2,8 +2,8 @@
 
 **Your First Step on the Road to AI Mastery**
 
-**📍 Location:** `0_Python_ML_Foundations/`  
-**🎯 Prerequisite:** None - Start here!  
+**📍 Location:** `0_Python and Data Science Tools/`  
+**🎯 Prerequisite:** None — Start here!  
 **➡️ Next Module:** [Module 1: Regression](../1_Regression/README.md)
 
 **Welcome to SAIR!** This is where your AI journey begins. Whether you're completely new to programming or looking to strengthen your fundamentals, this module will give you the Python skills needed to start building real machine learning systems.
@@ -86,7 +86,7 @@ At SAIR, we believe in **progressive mastery**. You don't need to be an expert i
 ### **For Beginners:**
 ```bash
 # 1. Start with Python basics
-jupyter notebook SAIR_Lecture_0.ipynb
+uv run jupyter notebook SAIR_Lecture_0.ipynb
 
 # 2. Begin Module 1: Regression when comfortable
 # 3. Return to other notebooks as needed
@@ -147,7 +147,7 @@ Our community of learners and mentors is here to support you every step of the w
 
 ## 🗂️ **Module Structure:**
 ```
-0_Python_ML_Foundations/
+0_Python and Data Science Tools/
 │
 ├── 📚 README.md                          # This guide
 ├── 🎯 SAIR_Lecture_0.ipynb               # Start Here - Python Basics

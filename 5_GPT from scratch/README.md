@@ -3,8 +3,8 @@
 **Building a Large Language Model — No Shortcuts, No Black Boxes**
 
 **📍 Location:** `5_GPT from scratch/`  
-**🎯 Prerequisite:** Module 4 – Applied Deep Learning with PyTorch  
-**➡️ Next Module:** Capstone
+**🎯 Prerequisite:** [Module 4: Applied Deep Learning with PyTorch](../4_Applied%20Deep%20Learning%20with%20PyTorch/README.md)  
+**➡️ Next Module:** Capstone (coming soon)
 
 Welcome to **Module 5** of **SAIR** — the deepest technical challenge of the entire track. You will build a GPT-style language model from absolute scratch: every tokenizer, every attention head, every training loop, and every fine-tuning step. By the end you will have a working LLM trained on real text and fine-tuned for two downstream tasks.
 

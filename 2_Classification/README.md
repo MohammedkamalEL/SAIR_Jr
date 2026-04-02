@@ -2,9 +2,9 @@
 
 **From Notebooks to Professional ML Systems**
 
-**📍 Location:** `3_Classification/`  
+**📍 Location:** `2_Classification/`  
 **🎯 Prerequisite:** [Module 1: Regression Mastery](../1_Regression/README.md)  
-**➡️ Next Module:** [Module 3: Neural Networks from Scratch](../4_Neural%20Network%20from%20Scratch/README.md)
+**➡️ Next Module:** [Module 3: Neural Networks from Scratch](../3_Neural%20Network%20from%20scratch/README.md)
 
 Welcome to the **Classification Module** of **SAIR** – where you transition from experimental notebooks to **production-ready ML systems** with professional pipelines and deployment architecture.
 
@@ -257,7 +257,7 @@ Get architecture reviews, pipeline feedback, and join deep-dive sessions on ML e
 → Create your project following the pipeline pattern
 
 ### **Ready to advance?**
-→ Continue to [Module 3: Neural Networks from Scratch](../4_Neural%20Network%20from%20Scratch/README.md)
+→ Continue to [Module 3: Neural Networks from Scratch](../3_Neural%20Network%20from%20scratch/README.md)
 
 ---
 
@@ -279,7 +279,7 @@ Get architecture reviews, pipeline feedback, and join deep-dive sessions on ML e
 
 ---
 
-**🔜 Next Step:** [Module 3: Neural Networks from Scratch](../4_Neural%20Network%20from%20Scratch/README.md)
+**🔜 Next Step:** [Module 3: Neural Networks from Scratch](../3_Neural%20Network%20from%20scratch/README.md)
 
 ---
 

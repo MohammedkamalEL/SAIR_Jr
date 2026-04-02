@@ -2,9 +2,9 @@
 
 **Building Deep Learning Systems from Mathematical Foundations to Production Pipelines**
 
-**📍 Location:** `3_Neural Network from Scrach/`  
+**📍 Location:** `3_Neural Network from scratch/`  
 **🎯 Prerequisite:** [Module 2: Classification & Production Pipelines](../2_Classification/README.md)  
-**➡️ Next Module:** *Computer Vision & Convolutional Neural Networks*
+**➡️ Next Module:** [Module 4: Applied Deep Learning with PyTorch](../4_Applied%20Deep%20Learning%20with%20PyTorch/README.md)
 
 Welcome to the **Neural Networks from Scratch Module** of **SAIR** – where you'll build complete deep learning systems using only **pure NumPy**. From individual neurons to production pipelines, you'll understand every mathematical operation and engineering decision behind modern deep learning.
 
@@ -457,13 +457,13 @@ Join our community for:
 → Start designing your library, then build a pipeline around it
 
 ### **Ready for the next challenge?**
-→ Continue to *Computer Vision & Convolutional Neural Networks* (coming soon!)
+→ Continue to [Module 4: Applied Deep Learning with PyTorch](../4_Applied%20Deep%20Learning%20with%20PyTorch/README.md)
 
 ---
 
 ## 🗂️ **Module Structure:**
 ```
-3_Neural Network from Scrach/
+3_Neural Network from scratch/
 │
 ├── 📚 README.md                          # This guide
 ├── 🧮 nn.ipynb                           # From Neurons to MLP + Gradient Descent
@@ -515,7 +515,7 @@ Join our community for:
 
 ---
 
-**🔜 Next Step:** Your implementation → Real-world applications → Advanced architectures
+**🔜 Next Step:** [Module 4: Applied Deep Learning with PyTorch](../4_Applied%20Deep%20Learning%20with%20PyTorch/README.md)
 
 ---
 

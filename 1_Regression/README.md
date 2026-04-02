@@ -3,8 +3,8 @@
 **From Mathematical Foundations to Production Deployment**
 
 **📍 Location:** `1_Regression/`  
-**🎯 Prerequisite:** [Module 0: Python Foundations](../0_Python_ML_Foundations/README.md)  
-**➡️ Next Module:** [Module 2: Classification & Pipelines](../3_Classification/README.md)
+**🎯 Prerequisite:** [Module 0: Python Foundations](../0_Python%20and%20Data%20Science%20Tools/README.md)  
+**➡️ Next Module:** [Module 2: Classification & Pipelines](../2_Classification/README.md)
 
 Welcome to the **Regression Module** of **SAIR** – your **first hands-on ML course** where you'll build real models, deploy interactive applications, and solve problems with your own datasets.
 
@@ -187,7 +187,7 @@ Share your progress, get code reviews, and join live sessions with instructors a
 → Explore [`Regression Capstone Projects/`](Regression%20Capstone%20Projects/)
 
 ### **Ready to advance?**
-→ Continue to [Module 2: Classification & Pipelines](../3_Classification/README.md)
+→ Continue to [Module 2: Classification & Pipelines](../2_Classification/README.md)
 
 ---
 
@@ -209,7 +209,7 @@ Share your progress, get code reviews, and join live sessions with instructors a
 
 ---
 
-**🔜 Next Step:** [Module 2: Classification & Production Pipelines](../3_Classification/README.md)
+**🔜 Next Step:** [Module 2: Classification & Production Pipelines](../2_Classification/README.md)
 
 ---
 
