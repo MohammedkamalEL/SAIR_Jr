@@ -2,8 +2,8 @@
 
 **From PyTorch Fundamentals to Modern Gen AI**
 
-**📍 Location:** `4_Applied Deep Learning with PyTorch/`
-**🎯 Prerequisite:** [Module 3: Neural Networks from Scratch](../3_Neural%20Network%20from%20scratch/README.md)
+**📍 Location:** `4_Applied Deep Learning with PyTorch/`  
+**🎯 Prerequisite:** [Module 3: Neural Networks from Scratch](../3_Neural%20Network%20from%20scratch/README.md)  
 **➡️ Next Module:** [Module 5: GPT from Scratch](../5_GPT%20from%20scratch/README.md)
 
 Welcome to **Module 4** of **SAIR** – your comprehensive journey into applied deep learning with PyTorch. This module bridges theory and practice, taking you from tensor operations all the way to modern architectures, with stops along the way for CNNs, YOLOv8, RNNs, LSTMs, and HuggingFace transformers.

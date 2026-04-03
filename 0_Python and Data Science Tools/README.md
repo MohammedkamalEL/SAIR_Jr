@@ -141,10 +141,6 @@ Our community of learners and mentors is here to support you every step of the w
 
 ---
 
-**🔜 Next Step:** [Module 1: Regression - Build Your First ML Model](../1_Regression/README.md)
-
----
-
 ## 🗂️ **Module Structure:**
 ```
 0_Python and Data Science Tools/
@@ -159,5 +155,4 @@ Our community of learners and mentors is here to support you every step of the w
 ```
 
 ---
-
 

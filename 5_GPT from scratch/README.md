@@ -4,7 +4,7 @@
 
 **📍 Location:** `5_GPT from scratch/`  
 **🎯 Prerequisite:** [Module 4: Applied Deep Learning with PyTorch](../4_Applied%20Deep%20Learning%20with%20PyTorch/README.md)  
-**➡️ Next Module:** Capstone (coming soon)
+**➡️ Next Step:** Capstone / final integration project
 
 Welcome to **Module 5** of **SAIR** — the deepest technical challenge of the entire track. You will build a GPT-style language model from absolute scratch: every tokenizer, every attention head, every training loop, and every fine-tuning step. By the end you will have a working LLM trained on real text and fine-tuned for two downstream tasks.
 
@@ -14,10 +14,11 @@ No HuggingFace `from_pretrained`. No shortcuts. Just PyTorch and first principle
 
 ## 🎯 Module Overview
 
-This module is structured in two parts:
+This module is structured in three parts:
 
-1. **6 Lectures** — progressive notebooks building every component from the ground up
-2. **Modular Pipeline** — a production-style reimplementation of the full stack as clean, importable Python modules
+1. **4 core build notebooks** — tokenizer, attention, GPT architecture, and training
+2. **1 advanced training extension** — deeper training experiments and refinements
+3. **2 SFT notebooks** — classification and instruction-following fine-tuning
 
 ### What You Will Build
 
@@ -36,14 +37,17 @@ Raw Text (Harry Potter corpus)
     ▼
 [ Lecture 4 ] Training Loop (loss, optimiser, checkpointing, generation)
     │
-    ├──▶ [ Lecture 5 ] SFT — Text Classification
+    ▼
+[ Notebook 5 ] Advanced Training Extension
     │
-    └──▶ [ Lecture 6 ] SFT — Instruction Following
+    ├──▶ [ Notebook 6 ] SFT — Text Classification
+    │
+    └──▶ [ Notebook 7 ] SFT — Instruction Following
 ```
 
 ---
 
-## 📚 Lecture Breakdown
+## 📚 Notebook Breakdown
 
 ### Lecture 1 — Data Preparation & Tokenization
 📓 `1.DATA.ipynb`
@@ -106,8 +110,21 @@ Raw Text (Harry Potter corpus)
 
 ---
 
-### Lecture 5 — SFT: Text Classification
-📓 `5.SFT_Text_Classification.ipynb`
+### Notebook 5 — Advanced Training Extension
+📓 `5.TRAIN_Pro.ipynb`
+
+An additional training notebook that extends the core GPT training workflow with more advanced experimentation before fine-tuning.
+
+| Topic | What You Build |
+|-------|---------------|
+| Training refinements | Extend the base training workflow beyond the first end-to-end run |
+| Deeper experimentation | Inspect more training behaviour and practical tradeoffs |
+| Bridge to SFT | Prepare the model and workflow for downstream adaptation tasks |
+
+---
+
+### Notebook 6 — SFT: Text Classification
+📓 `6.SFT_Text_Classification.ipynb`
 
 Fine-tune the pretrained GPT on a labelled classification dataset.
 
@@ -120,8 +137,8 @@ Fine-tune the pretrained GPT on a labelled classification dataset.
 
 ---
 
-### Lecture 6 — SFT: Instruction Following
-📓 `6.SFT_Instruction_Following.ipynb`
+### Notebook 7 — SFT: Instruction Following
+📓 `7.SFT_Instruction_Following.ipynb`
 
 Fine-tune the pretrained GPT to follow instructions in a prompt-response format.
 
@@ -134,32 +151,11 @@ Fine-tune the pretrained GPT to follow instructions in a prompt-response format.
 
 ---
 
-## 🏗️ Modular Pipeline
-📁 `pipeline/` *(coming soon)*
+## 🏗️ What Is In The Repo Right Now
 
-The same implementation from the lectures, restructured as a production-ready Python package:
+This module currently ships as a notebook-first learning path plus prepared data files and reading resources.
 
-```
-pipeline/
-├── data/
-│   ├── loader.py          # book loading + train/val/test split
-│   ├── tokenizer.py       # tiktoken wrapper
-│   └── dataset.py         # GPT2Dataset + DataLoader factory
-├── model/
-│   ├── attention.py       # MultiHeadAttention
-│   ├── blocks.py          # TransformerBlock, LayerNorm, GELU, FeedForward
-│   └── gpt.py             # GPTModel + config
-├── training/
-│   ├── trainer.py         # training loop, checkpointing
-│   └── generate.py        # text generation utilities
-├── sft/
-│   ├── classifier.py      # classification fine-tuning
-│   └── instruct.py        # instruction fine-tuning
-├── config.py              # GPT_CONFIG_124M and variants
-└── run.py                 # single entry point: train / generate / fine-tune
-```
-
-The pipeline is the difference between *understanding* the code and *using* it in production. Once you have completed all 6 lectures, you will reimplement everything modularly — no notebooks, no scaffolding.
+There is **not yet** a `pipeline/` package in this folder. When that production reimplementation is added later, it should be documented as a separate deliverable rather than mixed into the current runnable instructions.
 
 ---
 
@@ -184,9 +180,13 @@ cd "5_GPT from scratch"
 # Run a lecture notebook
 uv run jupyter notebook 1.DATA.ipynb
 
-# Or run the full pipeline (after completing lectures)
-uv run python pipeline/run.py --mode train
-uv run python pipeline/run.py --mode generate --prompt "Harry looked at"
+# Continue through the remaining notebooks in order
+uv run jupyter notebook 2.ATTENTION.ipynb
+uv run jupyter notebook 3.GPT.ipynb
+uv run jupyter notebook 4.TRAIN.ipynb
+uv run jupyter notebook 5.TRAIN_Pro.ipynb
+uv run jupyter notebook 6.SFT_Text_Classification.ipynb
+uv run jupyter notebook 7.SFT_Instruction_Following.ipynb
 ```
 
 **Data:** the Harry Potter books are already in the repo at  
@@ -204,16 +204,16 @@ No downloads required.
 ├── 2.ATTENTION.ipynb               # Lecture 2 — attention mechanisms
 ├── 3.GPT.ipynb                     # Lecture 3 — full GPT architecture
 ├── 4.TRAIN.ipynb                   # Lecture 4 — training loop
-├── 5.SFT_Text_Classification.ipynb # Lecture 5 — classification fine-tuning
-├── 6.SFT_Instruction_Following.ipynb # Lecture 6 — instruction fine-tuning
+├── 5.TRAIN_Pro.ipynb               # Advanced training extension
+├── 6.SFT_Text_Classification.ipynb # Notebook 6 — classification fine-tuning
+├── 7.SFT_Instruction_Following.ipynb # Notebook 7 — instruction fine-tuning
 ├── data/
 │   ├── train_ids.bin               # ~1.9M tokens (90% of corpus)
 │   ├── val_ids.bin                 # ~148K tokens (7%)
 │   └── test_ids.bin                # ~61K tokens (3%)
-├── pipeline/                       # Modular production implementation
 ├── Resources/
 │   ├── raschka_llm_from_scratch.pdf          # Primary textbook
-│   ├── raschka_llm_from_scratch_cover.jpg    # Book cover
+│   ├── raschka_llm_from_scratch_cover.png    # Book cover
 │   ├── raschka_llm_exercises.pdf             # Exercise companion
 │   └── attention_is_all_you_need.pdf         # Vaswani et al. 2017
 └── README.md

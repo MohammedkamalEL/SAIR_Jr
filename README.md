@@ -103,7 +103,7 @@
 │   ├── 🧠 Module 5: GPT from Scratch (Current)
 │   └── 💎 Capstone: Real-World Project
 │
-├── 🚀 SAIR Mid (Coming 2025)
+├── 🚀 SAIR Mid (Planned Next Stage)
 │   └── Advanced AI → Research & Specialization
 │
 └── 🏆 SAIR Sr. (Future)
@@ -361,7 +361,7 @@
 - ✅ Finish all hands-on projects with production-grade code
 - ✅ **Complete NeetCode 75 (LeetCode Pattern Mastery)**
 - ✅ Submit and present capstone project that solves real problems
-- ✅ Complete required reading (Hands-on ML + Designing ML Systems)
+- ✅ Complete all mandatory reading books
 - ✅ Watch MLOps Fundamentals Playlist and implement concepts
 
 </td>
@@ -378,6 +378,60 @@
 </td>
 </tr>
 </table>
+
+### 📚 **Mandatory Reading for Full Program Completion**
+
+To fully complete the SAIR Jr. program, students must finish the following books in parallel with the coursework:
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/REQUIRED_READING-MANDATORY-D32F2F?style=for-the-badge&logo=bookstack&logoColor=white" alt="Mandatory reading badge"/>
+
+<table>
+<tr>
+<td align="center" width="33%">
+<a href="https://openlibrary.org/isbn/9781999579517">
+<img src="assets/reading/hundred-page-ml-book.jpg" alt="The Hundred-Page Machine Learning Book cover" width="150"/>
+</a>
+<br/>
+<strong>The Hundred-Page Machine Learning Book</strong>
+<br/>
+<em>Andriy Burkov</em>
+</td>
+<td align="center" width="33%">
+<a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/">
+<img src="assets/reading/hands-on-ml-new-edition.jpg" alt="Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch cover" width="150"/>
+</a>
+<br/>
+<strong>Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch</strong>
+<br/>
+<em>New edition</em>
+</td>
+<td align="center" width="33%">
+<a href="https://openlibrary.org/isbn/9781098107963">
+<img src="assets/reading/designing-ml-systems.jpg" alt="Designing Machine Learning Systems cover" width="150"/>
+</a>
+<br/>
+<strong>Designing Machine Learning Systems</strong>
+<br/>
+<em>Chip Huyen</em>
+</td>
+</tr>
+</table>
+
+<p><strong>SAIR community note:</strong> All of these mandatory books are offered for free upon request inside the SAIR community.</p>
+
+</div>
+
+**Required books (mandatory)**
+- *The Hundred-Page Machine Learning Book*
+- *Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch* (new edition)
+- *Designing Machine Learning Systems* — Chip Huyen
+
+**Additional books (helpful, but not mandatory)**
+- *Python Data Science Handbook*
+- *Practical MLOps*
+- *Machine Learning with PyTorch and Scikit-Learn* — Yuxi (Hayden) Liu, Sebastian Raschka, and Vahid Mirjalili
 
 ---
 
