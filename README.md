@@ -37,6 +37,19 @@
 
 ---
 
+## 🗺️ **Quick Navigation**
+
+| Module | Directory | README | Status |
+|--------|-----------|--------|--------|
+| 0 — Python & Data Science Tools | `0_Python and Data Science Tools/` | [README](0_Python%20and%20Data%20Science%20Tools/README.md) | ✅ Complete |
+| 1 — Regression | `1_Regression/` | [README](1_Regression/README.md) | ✅ Complete |
+| 2 — Classification & Pipelines | `2_Classification/` | [README](2_Classification/README.md) | ✅ Complete |
+| 3 — Neural Networks from Scratch | `3_Neural%20Network%20from%20scratch/` | [README](3_Neural%20Network%20from%20scratch/README.md) | ✅ Complete |
+| 4 — Applied Deep Learning with PyTorch | `4_Applied Deep Learning with PyTorch/` | [README](4_Applied%20Deep%20Learning%20with%20PyTorch/README.md) | ⚡ Active (75%) |
+| 5 — GPT from Scratch | `5_GPT from scratch/` | [README](5_GPT%20from%20scratch/README.md) | 🔥 In Progress |
+
+---
+
 ## ⚡ **The SAIR Ethos: We Do Hard Things**
 
 <div align="center">

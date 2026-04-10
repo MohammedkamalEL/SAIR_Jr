@@ -70,6 +70,22 @@ These **production tools** transform your ML code from experiments to enterprise
 
 ---
 
+## 🎯 Learning Outcomes
+
+After completing this module, you will be able to:
+
+| Skill | Where You Build It |
+|-------|--------------------|
+| Implement logistic regression from scratch | `Lecture_4.ipynb` |
+| Interpret classification metrics: precision, recall, F1, ROC-AUC | `Lecture_4.ipynb` |
+| Transform a notebook into a modular ML codebase | `Lecture_5.ipynb` |
+| Design a configuration-driven pipeline | `Pipeline/` |
+| Run grid search and hyperparameter tuning at scale | `Pipeline/models/` |
+| Compare experiments in MLflow and select the best model | `Pipeline/` |
+| Deploy a classifier as a Streamlit web app | `Pipeline/streamlit_app/` |
+
+---
+
 ## 💡 Our Learning Philosophy
 
 > **"From experimental code to production systems."**
@@ -229,6 +245,39 @@ After studying this pipeline, you'll be able to:
 # models/base_model.py → Your model portfolio
 # streamlit_app/app.py → Your application interface
 ```
+
+---
+
+## 📊 Reading MLflow Results
+
+When you run the pipeline, MLflow logs every experiment. Here's how to interpret the results:
+
+```bash
+# Open the MLflow dashboard
+mlflow ui --backend-store-uri Pipeline/mlruns
+# Then open: http://localhost:5000
+```
+
+| Metric | What It Means | Good Range |
+|--------|--------------|------------|
+| `val_accuracy` | Accuracy on held-out validation set | >85% for most problems |
+| `val_f1` | Harmonic mean of precision and recall | >0.80 for balanced classes |
+| `val_roc_auc` | Area under the ROC curve | >0.85 is strong |
+| `train_accuracy` vs `val_accuracy` | Gap > 10% = overfitting | Keep gap under 5% |
+
+**Model selection rule:** pick the model with the best `val_f1`, not `train_accuracy`. High training accuracy with low val accuracy = overfitting — try more regularization or less complexity.
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Likely Cause | Fix |
+|---------|-------------|-----|
+| `mlflow.exceptions.MlflowException` | Tracking dir not found | Run pipeline from the `Pipeline/` directory |
+| Streamlit app shows stale predictions | Old model pickle loaded | Delete `models/` and re-run `--mode full` |
+| `KeyError` in feature engineering | Column renamed in your dataset | Update column names in `config.py` |
+| Hyperparameter tuning takes too long | Too many combinations | Reduce `param_grid` in `models/base_model.py` |
+| `Class imbalance` warning | Unequal class distribution | Add `class_weight='balanced'` to your estimator |
 
 ---
 

@@ -71,6 +71,22 @@ These are the **essential ML tools** that bridge experimentation to production.
 
 ---
 
+## 🎯 Learning Outcomes
+
+After completing this module, you will be able to:
+
+| Skill | Where You Build It |
+|-------|--------------------|
+| Implement linear regression from scratch using NumPy | `Lecture_1.ipynb` |
+| Explain gradient descent and derive the cost function | `Lecture_1.ipynb` |
+| Use `sklearn` pipelines for preprocessing + modeling | `Lecture_2.ipynb` |
+| Evaluate models with MSE, RMSE, R² | `Lecture_2.ipynb` |
+| Track experiments with MLflow | `Lecture_3.ipynb` |
+| Deploy an interactive web app with Streamlit or Gradio | `Lecture_3.ipynb` |
+| Build an end-to-end ML project from data to deployment | Capstone |
+
+---
+
 ## 💡 Our Learning Philosophy
 
 > **"Implement from scratch, then scale with frameworks."**
@@ -165,6 +181,19 @@ Explore amazing projects built by SAIR learners:
 
 https://github.com/user-attachments/assets/c72174a2-800f-458c-9602-55dfaaf037df
 
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Likely Cause | Fix |
+|---------|-------------|-----|
+| `streamlit: command not found` | Streamlit not installed | `uv sync` then `uv run streamlit run app.py` |
+| `Port 8501 already in use` | Another Streamlit instance running | Kill with `pkill -f streamlit` or use `--server.port 8502` |
+| MLflow UI shows no runs | Wrong tracking directory | Run `mlflow ui` from inside the module directory |
+| `ModuleNotFoundError` in notebooks | Wrong kernel selected | Kernel → Change Kernel → match your `uv` venv |
+| Pickle `ValueError` on model load | Model saved with different sklearn version | Retrain and re-save the model |
+| Gradio app won't open | Port conflict or firewall | Try `demo.launch(share=True)` |
 
 ---
 

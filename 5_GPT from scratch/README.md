@@ -46,7 +46,7 @@ Raw Text (Harry Potter corpus)
 ## 📚 Lecture Breakdown
 
 ### Lecture 1 — Data Preparation & Tokenization
-📓 `1.DATA.ipynb`
+📓 `1.DATA.ipynb` · **⏱ 4–5 hours**
 
 | Topic | What You Build |
 |-------|---------------|
@@ -62,7 +62,7 @@ Raw Text (Harry Potter corpus)
 ---
 
 ### Lecture 2 — Attention Mechanisms
-📓 `2.ATTENTION.ipynb`
+📓 `2.ATTENTION.ipynb` · **⏱ 6–7 hours**
 
 | Topic | What You Build |
 |-------|---------------|
@@ -78,7 +78,7 @@ Raw Text (Harry Potter corpus)
 ---
 
 ### Lecture 3 — GPT Architecture
-📓 `3.GPT.ipynb`
+📓 `3.GPT.ipynb` · **⏱ 6–8 hours**
 
 | Component | Details |
 |-----------|---------|
@@ -94,7 +94,7 @@ Raw Text (Harry Potter corpus)
 ---
 
 ### Lecture 4 — Training Loop
-📓 `4.TRAIN.ipynb`
+📓 `4.TRAIN.ipynb` · **⏱ 6–8 hours** (+ training time)
 
 | Topic | What You Build |
 |-------|---------------|
@@ -107,7 +107,7 @@ Raw Text (Harry Potter corpus)
 ---
 
 ### Lecture 5 — SFT: Text Classification
-📓 `5.SFT_Text_Classification.ipynb`
+📓 `5.SFT_Text_Classification.ipynb` · **⏱ 4–5 hours**
 
 Fine-tune the pretrained GPT on a labelled classification dataset.
 
@@ -121,7 +121,7 @@ Fine-tune the pretrained GPT on a labelled classification dataset.
 ---
 
 ### Lecture 6 — SFT: Instruction Following
-📓 `6.SFT_Instruction_Following.ipynb`
+📓 `6.SFT_Instruction_Following.ipynb` · **⏱ 4–5 hours**
 
 Fine-tune the pretrained GPT to follow instructions in a prompt-response format.
 
@@ -134,8 +134,35 @@ Fine-tune the pretrained GPT to follow instructions in a prompt-response format.
 
 ---
 
+## 💻 Compute Requirements
+
+| Task | CPU Only | T4 GPU (Colab) | GPU 8 GB+ |
+|------|----------|----------------|-----------|
+| Lectures 1–3 (no training) | ✅ Fine | ✅ Fast | ✅ Fast |
+| Lecture 4 — full training run | ⚠️ 12–24 hrs | ~2–3 hrs/epoch | ~30–60 min/epoch |
+| Lecture 5 — SFT classification | ⚠️ Slow | ~30–60 min | ~10–15 min |
+| Lecture 6 — SFT instruction | ⚠️ Slow | ~45–90 min | ~15–30 min |
+
+> **Recommended:** Google Colab T4 GPU (free tier) is sufficient for all lectures.  
+> For Lecture 4 on CPU: reduce `GPT_CONFIG` to a smaller model (e.g., 4 layers, 256 dim) to test your loop first.
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Likely Cause | Fix |
+|---------|-------------|-----|
+| `CUDA out of memory` | Batch size too large | Reduce `batch_size` in config; try 4 or 8 |
+| Generation produces only repetitions | Untrained weights or greedy decoding | Use temperature sampling: `temperature=1.0, top_k=50` |
+| Loss not decreasing after epoch 1 | Learning rate too high | Try `lr=3e-4` with `AdamW` and warmup |
+| `AssertionError: shape mismatch` in weight loading | Wrong `qkv_bias` setting | Set `qkv_bias=True` when loading pretrained GPT-2 weights |
+| `tiktoken` encoding error | Non-UTF-8 characters in corpus | Strip with `text.encode('utf-8', errors='ignore').decode()` |
+| Checkpoint not found | Wrong path or never saved | Check `config.py` for `checkpoint_dir`; run training first |
+
+---
+
 ## 🏗️ Modular Pipeline
-📁 `pipeline/` *(coming soon)*
+📁 `pipeline/`
 
 The same implementation from the lectures, restructured as a production-ready Python package:
 

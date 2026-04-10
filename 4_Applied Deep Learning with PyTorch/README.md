@@ -43,27 +43,27 @@ This module is structured in four progressive sections:
 ### **1 — PyTorch Fundamentals**
 📁 `1_PyTorch Fundemntals/`
 
-| Notebook | Focus |
-|----------|-------|
-| `1_Intro.ipynb` | Tensors, autograd, model building, training loops |
-| `2_DataLoader.ipynb` | Dataset classes, DataLoader optimization, performance |
-
-Labs: `labs/lab_1.ipynb`, `labs/lab_2.ipynb`
+| Notebook | Focus | Time |
+|----------|-------|------|
+| `1_Intro.ipynb` | Tensors, autograd, model building, training loops | 5–6 hrs |
+| `2_DataLoader.ipynb` | Dataset classes, DataLoader optimization, performance | 4–5 hrs |
+| `labs/lab_1.ipynb` | Tensors & autograd practice | 2–3 hrs |
+| `labs/lab_2.ipynb` | Custom Dataset & DataLoader | 2–3 hrs |
 
 ---
 
 ### **2 — Computer Vision & CNNs**
 📁 `2_Vision and CNN/`
 
-| Notebook | Focus |
-|----------|-------|
-| `3_CNN.ipynb` | Convolutional Neural Networks from scratch |
-| `4_Transfer_and_ResNet.ipynb` | Transfer learning, ResNet, pretrained models |
-| `5A_YOLO.ipynb` | YOLOv8 object detection |
-| `5B_Segment_Pose.ipynb` | Instance segmentation and pose estimation |
-| `5C_ViTs_and_Deploy.ipynb` | Vision Transformers and model deployment |
-
-Labs: `labs/lab_3.ipynb`, `labs/lab_4.ipynb`
+| Notebook | Focus | Time |
+|----------|-------|------|
+| `3_CNN.ipynb` | Convolutional Neural Networks from scratch | 6–7 hrs |
+| `4_Transfer_and_ResNet.ipynb` | Transfer learning, ResNet, pretrained models | 5–6 hrs |
+| `5A_YOLO.ipynb` | YOLOv8 object detection | 4–5 hrs |
+| `5B_Segment_Pose.ipynb` | Instance segmentation and pose estimation | 3–4 hrs |
+| `5C_ViTs_and_Deploy.ipynb` | Vision Transformers and model deployment | 4–5 hrs |
+| `labs/lab_3.ipynb` | CNN architecture practice | 2–3 hrs |
+| `labs/lab_4.ipynb` | Transfer learning practice | 2–3 hrs |
 
 **Production Demos** — `2_Vision and CNN/Demos/`
 
@@ -92,12 +92,12 @@ Pre-trained models in `2_Vision and CNN/`:
 ### **3 — Sequence Modeling & NLP**
 📁 `3_Sequence and NLP/`
 
-| Notebook | Focus |
-|----------|-------|
-| `6_Intro_to_Seq.ipynb` | RNNs, LSTMs, sequence modeling fundamentals |
-| `7_Seq_to_Seq.ipynb` | Sequence-to-sequence architectures |
-| `8A_HuggingFace_Ecosystem.ipynb` | Pipelines, tokenizers, models, datasets |
-| `8B_Hugging_Face_Finetuning.ipynb` | Fine-tuning pretrained transformers end to end |
+| Notebook | Focus | Time |
+|----------|-------|------|
+| `6_Intro_to_Seq.ipynb` | RNNs, LSTMs, sequence modeling fundamentals | 5–6 hrs |
+| `7_Seq_to_Seq.ipynb` | Sequence-to-sequence architectures | 4–5 hrs |
+| `8A_HuggingFace_Ecosystem.ipynb` | Pipelines, tokenizers, models, datasets | 4–5 hrs |
+| `8B_Hugging_Face_Finetuning.ipynb` | Fine-tuning pretrained transformers end to end | 5–6 hrs |
 
 Saved models: `best_rnnclassifier.pt`, `best_lstmclassifier.pt`
 
@@ -353,6 +353,33 @@ jupyter notebook
 | `uv pip freeze > requirements.txt` | Generate requirements file |
 | `uv pip uninstall <package>` | Remove a package |
 | `uv cache clean` | Clean uv cache |
+
+---
+
+## 💻 Hardware Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| GPU VRAM | 4 GB (T4 on Colab) | 8 GB+ |
+| RAM | 8 GB | 16 GB |
+| Disk Space | 5 GB (pretrained models) | 10 GB |
+| CUDA Version | 11.8+ | 12.x |
+
+> **No GPU?** Use [Google Colab](https://colab.research.google.com/) with a free T4 GPU. All notebooks work on Colab.  
+> Check GPU availability: `python -c "import torch; print(torch.cuda.is_available())"`
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Likely Cause | Fix |
+|---------|-------------|-----|
+| `CUDA out of memory` | Batch size too large | Halve the batch size; use `torch.cuda.empty_cache()` |
+| `RuntimeError: Expected all tensors on the same device` | Mixing CPU and GPU tensors | Add `.to(device)` to all inputs and the model |
+| YOLOv8 demo crashes with no webcam | No camera attached | Use `demo_06_batch_processing.py` instead |
+| HuggingFace download hangs | Network issue or rate limit | Set `HF_HUB_OFFLINE=1` if models are already cached |
+| Training loss not decreasing | Learning rate too high/low | Try `lr=1e-3` for Adam as a safe starting point |
+| `UserWarning: No positive samples` | Class imbalance in mini-batch | Shuffle data and increase batch size |
 
 ---
 

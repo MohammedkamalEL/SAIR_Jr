@@ -43,12 +43,12 @@ These are the **essential tools** used by every data scientist and ML engineer w
 
 ## 📚 What You'll Learn
 
-| Notebook | Focus | Time Estimate | Mastery Level |
-|----------|-------|---------------|---------------|
-| **`SAIR_Lecture_0.ipynb`** | Python Basics & OOP | 3-4 hours | **Essential** |
-| **`numpy.ipynb`** | Numerical Computing | 4-5 hours | **Core ML Skill** |
-| **`pandas.ipynb`** | Data Analysis | 4-5 hours | **Core ML Skill** |
-| **`matplot.ipynb`** | Data Visualization | 3-4 hours | **Core ML Skill** |
+| Notebook | Focus | Time Estimate | After This You Can... |
+|----------|-------|---------------|-----------------------|
+| **`SAIR_Lecture_0.ipynb`** | Python Basics & OOP | 3–4 hours | Write functions, classes, list comprehensions; understand Python for ML |
+| **`numpy.ipynb`** | Numerical Computing | 4–5 hours | Create/reshape arrays, use broadcasting, perform matrix math for ML |
+| **`pandas.ipynb`** | Data Analysis | 4–5 hours | Load CSVs, clean data, group/filter/merge DataFrames |
+| **`matplot.ipynb`** | Data Visualization | 3–4 hours | Plot loss curves, histograms, scatter plots, heatmaps |
 
 ## 🗺️ Your Learning Journey
 
@@ -59,9 +59,14 @@ These are the **essential tools** used by every data scientist and ML engineer w
 
 ### **Phase 2: Build & Grow** 🚀
 **Use as needed during Modules 1-3:**
-- Refer to `numpy.ipynb` when working with arrays and math
-- Use `pandas.ipynb` for data cleaning and analysis
-- Consult `matplot.ipynb` for creating visualizations
+
+| You'll need... | Jump to... |
+|----------------|------------|
+| Array operations, matrix math | `numpy.ipynb` — Sections 3–5 |
+| Loading/cleaning a CSV dataset | `pandas.ipynb` — Section 2 |
+| Plotting loss or accuracy curves | `matplot.ipynb` — Section 3 |
+| Group-by aggregations | `pandas.ipynb` — Section 4 |
+| Broadcasting confusion | `numpy.ipynb` — Section 4 |
 
 ### **Phase 3: Master the Tools** 📚
 **Complete for deep understanding:**
@@ -126,11 +131,23 @@ Our community of learners and mentors is here to support you every step of the w
 
 ## 📚 Mastery Notebooks
 
-| Notebook | Description | Best For |
-|----------|-------------|----------|
-| [`numpy.ipynb`](numpy.ipynb) | High-performance numerical computing | ML algorithms & math |
-| [`pandas.ipynb`](pandas.ipynb) | Real-world data analysis & cleaning | Data preprocessing |
-| [`matplot.ipynb`](matplot.ipynb) | Professional data visualization | Results communication |
+| Notebook | Description | Best For | Official Docs |
+|----------|-------------|----------|---------------|
+| [`numpy.ipynb`](numpy.ipynb) | High-performance numerical computing | ML algorithms & math | [numpy.org](https://numpy.org/doc/stable/) |
+| [`pandas.ipynb`](pandas.ipynb) | Real-world data analysis & cleaning | Data preprocessing | [pandas.pydata.org](https://pandas.pydata.org/docs/) |
+| [`matplot.ipynb`](matplot.ipynb) | Professional data visualization | Results communication | [matplotlib.org](https://matplotlib.org/stable/index.html) |
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Likely Cause | Fix |
+|---------|-------------|-----|
+| `ModuleNotFoundError: numpy` | Dependencies not installed | Run `uv sync` from the SAIR root |
+| Jupyter won't open | Not installed or wrong env | `uv run jupyter notebook` |
+| `ValueError: shape mismatch` | Wrong array dimensions | Check shapes with `arr.shape` before operations |
+| `KeyError` in pandas | Column name typo or wrong case | Use `df.columns` to list all column names |
+| Blank matplotlib plot | Missing `plt.show()` or output in script | Add `plt.show()` or use `%matplotlib inline` |
 
 ---
 

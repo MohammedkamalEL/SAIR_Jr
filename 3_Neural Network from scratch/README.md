@@ -42,13 +42,18 @@ Welcome to the **Neural Networks from Scratch Module** of **SAIR** – where you
 
 ## 📚 Learning Progression
 
-| Component | Focus | Core Concepts |
-|-----------|-------|---------------|
-| **`nn.ipynb`** | Building from Neurons to MLP | Forward/backward propagation, gradient descent |
-| **`nn2.ipynb`** | Advanced Techniques | Optimizers, regularization, initialization |
-| **`nn3.ipynb`** | Complete Library Design | Modular architecture, API design, training systems |
-| **`DeepPip/`** | End-to-End Pipeline | Data loading, training, evaluation, basic UI |
-| **`deep-learning-pipeline-lecture3/`** | Advanced Production System | CLI tools, experiment tracking, comprehensive UI |
+| Component | Focus | Time Estimate | After This You Can... |
+|-----------|-------|---------------|-----------------------|
+| **`nn.ipynb`** | Building from Neurons to MLP | 8–10 hours | Implement forward/backward pass from scratch, train a 2-layer net on MNIST |
+| **`nn2.ipynb`** | Advanced Techniques | 6–8 hours | Add Adam, dropout, L2 reg; stabilize training on deeper nets |
+| **`nn3.ipynb`** | Complete Library Design | 10–12 hours | Build a clean `Dense/ReLU/Softmax/SGD` library others can import and use |
+| **`DeepPip/`** | End-to-End Pipeline (Simple) | 4–5 hours | Run a full data→train→evaluate→UI pipeline with your library |
+| **`deep-learning-pipeline-lecture3/`** | Production System (Advanced) | 5–6 hours | Use CLI tools, config files, experiment tracking in a team-style project |
+
+> **Which pipeline should I use?**
+> - **Beginners → `DeepPip/`**: clean, minimal, runs in one command
+> - **Production practice → `deep-learning-pipeline-lecture3/`**: CLI flags, modular scripts, closer to real-world engineering
+> - **Recommended:** start with `DeepPip/`, then explore the advanced one once your library works
 
 ## 🗺️ Your Learning Journey
 
@@ -78,6 +83,36 @@ Welcome to the **Neural Networks from Scratch Module** of **SAIR** – where you
 - **`DeepPip/`**: Complete end-to-end pipeline
 - **`deep-learning-pipeline-lecture3/`**: Advanced production system with CLI tools
 - Learn to structure projects for maintainability and scalability
+
+---
+
+## 🎯 Recommended Starter Dataset
+
+Start with **MNIST** (handwritten digits, 10 classes, 60K training images):
+- Small enough to train in minutes on CPU
+- Well-understood: you know what 97%+ accuracy looks like
+- Concrete feedback loop: you can *see* if digits are classified correctly
+
+```python
+from sklearn.datasets import fetch_openml
+mnist = fetch_openml('mnist_784', version=1, as_frame=False)
+X, y = mnist.data / 255.0, mnist.target.astype(int)  # normalise to [0,1]
+```
+
+**Target:** achieve ≥97% test accuracy with your library. That proves it works.
+
+---
+
+## 🐛 Debugging Guide
+
+| Symptom | Likely Cause | Fix |
+|---------|-------------|-----|
+| Accuracy stuck at ~10% (random chance) | Gradient not flowing | Print `dW` and `db` — if all zeros, check backward pass |
+| Loss is `NaN` from step 1 | Learning rate too high or log(0) | Try `lr=0.001`; add `np.clip(pred, 1e-7, 1-1e-7)` before log |
+| Loss drops, then spikes | Learning rate too high | Halve it; add gradient clipping |
+| Overfitting (train 99%, val 70%) | Model too big or no regularisation | Add L2 or dropout; reduce hidden units |
+| Very slow convergence | No batch normalisation / bad init | Use He init for ReLU: `W = np.random.randn(n_in, n_out) * np.sqrt(2/n_in)` |
+| Softmax outputs all same value | Collapsed representations | Check input normalisation; initialise weights smaller |
 
 ---
 
