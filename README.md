@@ -397,6 +397,9 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <strong>The Hundred-Page Machine Learning Book</strong>
 <br/>
 <em>Andriy Burkov</em>
+<br/><br/>
+<img src="https://img.shields.io/badge/📖 Read_First-Module_0--1-4CAF50?style=flat-square" alt="Read first"/>
+<br/><sub>Start here before anything else</sub>
 </td>
 <td align="center" width="25%">
 <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/">
@@ -406,15 +409,9 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <strong>Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch</strong>
 <br/>
 <em>New edition</em>
-</td>
-<td align="center" width="25%">
-<a href="https://openlibrary.org/isbn/9781098107963">
-<img src="assets/reading/designing-ml-systems.jpg" alt="Designing Machine Learning Systems cover" width="150"/>
-</a>
-<br/>
-<strong>Designing Machine Learning Systems</strong>
-<br/>
-<em>Chip Huyen</em>
+<br/><br/>
+<img src="https://img.shields.io/badge/📖 Read_In_Parallel-Modules_1--4-2196F3?style=flat-square" alt="Modules 1-4"/>
+<br/><sub>Alongside classical ML &amp; deep learning with PyTorch</sub>
 </td>
 <td align="center" width="25%">
 <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
@@ -424,6 +421,21 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <strong>Build a Large Language Model (From Scratch)</strong>
 <br/>
 <em>Sebastian Raschka</em>
+<br/><br/>
+<img src="https://img.shields.io/badge/📖 Read_In_Parallel-Module_5-EE4C2C?style=flat-square" alt="Module 5"/>
+<br/><sub>Alongside GPT from Scratch module</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://openlibrary.org/isbn/9781098107963">
+<img src="assets/reading/designing-ml-systems.jpg" alt="Designing Machine Learning Systems cover" width="150"/>
+</a>
+<br/>
+<strong>Designing Machine Learning Systems</strong>
+<br/>
+<em>Chip Huyen</em>
+<br/><br/>
+<img src="https://img.shields.io/badge/📖 Read_In_Parallel-Capstone_%26_MLOps-9C27B0?style=flat-square" alt="Capstone & MLOps"/>
+<br/><sub>Alongside MLOps &amp; capstone project</sub>
 </td>
 </tr>
 </table>
@@ -432,11 +444,14 @@ To fully complete the SAIR Jr. program, students must finish the following books
 
 </div>
 
-**Required books (mandatory)**
-- *The Hundred-Page Machine Learning Book*
-- *Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch* (new edition)
-- *Designing Machine Learning Systems* — Chip Huyen
-- *Build a Large Language Model (From Scratch)* — Sebastian Raschka
+**Required books (mandatory)** — read at the right time, not all at once
+
+| Book | Author | When to Read |
+|------|--------|--------------|
+| *The Hundred-Page Machine Learning Book* | Andriy Burkov | **Start here** — before Module 1 |
+| *Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch* | Aurélien Géron | **Modules 1–4** — in parallel with classical ML & deep learning |
+| *Build a Large Language Model (From Scratch)* | Sebastian Raschka | **Module 5** — in parallel with GPT from Scratch |
+| *Designing Machine Learning Systems* | Chip Huyen | **Capstone & MLOps** — in parallel with the final phase |
 
 **Additional books (helpful, but not mandatory)**
 - *Python Data Science Handbook*
