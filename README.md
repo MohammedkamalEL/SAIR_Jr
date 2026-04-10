@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![SAIR Banner](SAIR.jpg)
+![SAIR Banner](SAiR_logo.jpg)
 
 ### **Build Production-Ready AI Skills from Scratch**
 *The foundational AI/ML engineering program of the Sudanese Artificial Intelligence Research (SAIR) Initiative*
