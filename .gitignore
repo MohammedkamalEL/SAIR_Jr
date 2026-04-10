@@ -429,3 +429,6 @@ CLAUDE.md
 5_GPT from scratch/Resources/*.pdf
 !5_GPT from scratch/Resources/*.jpg
 !5_GPT from scratch/Resources/*.png
+
+# Module 5 — GPT-2 pretrained weights (large binary, re-downloadable)
+5_GPT from scratch/gpt2_weights/

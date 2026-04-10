@@ -389,7 +389,7 @@ To fully complete the SAIR Jr. program, students must finish the following books
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center" width="25%">
 <a href="https://openlibrary.org/isbn/9781999579517">
 <img src="assets/reading/hundred-page-ml-book.jpg" alt="The Hundred-Page Machine Learning Book cover" width="150"/>
 </a>
@@ -398,7 +398,7 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <br/>
 <em>Andriy Burkov</em>
 </td>
-<td align="center" width="33%">
+<td align="center" width="25%">
 <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/">
 <img src="assets/reading/hands-on-ml-new-edition.jpg" alt="Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch cover" width="150"/>
 </a>
@@ -407,7 +407,7 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <br/>
 <em>New edition</em>
 </td>
-<td align="center" width="33%">
+<td align="center" width="25%">
 <a href="https://openlibrary.org/isbn/9781098107963">
 <img src="assets/reading/designing-ml-systems.jpg" alt="Designing Machine Learning Systems cover" width="150"/>
 </a>
@@ -415,6 +415,15 @@ To fully complete the SAIR Jr. program, students must finish the following books
 <strong>Designing Machine Learning Systems</strong>
 <br/>
 <em>Chip Huyen</em>
+</td>
+<td align="center" width="25%">
+<a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
+<img src="assets/reading/build-llm-from-scratch.png" alt="Build a Large Language Model From Scratch cover" width="150"/>
+</a>
+<br/>
+<strong>Build a Large Language Model (From Scratch)</strong>
+<br/>
+<em>Sebastian Raschka</em>
 </td>
 </tr>
 </table>
@@ -427,6 +436,7 @@ To fully complete the SAIR Jr. program, students must finish the following books
 - *The Hundred-Page Machine Learning Book*
 - *Hands-On Machine Learning with Scikit-Learn, Keras, and PyTorch* (new edition)
 - *Designing Machine Learning Systems* — Chip Huyen
+- *Build a Large Language Model (From Scratch)* — Sebastian Raschka
 
 **Additional books (helpful, but not mandatory)**
 - *Python Data Science Handbook*
