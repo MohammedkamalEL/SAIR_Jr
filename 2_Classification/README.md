@@ -1,4 +1,4 @@
-# Module 2: Classification & Production Pipelines 🎯
+# Module 2: Classification & Production Pipelines  🎯
 
 **From Notebooks to Professional ML Systems**
 
