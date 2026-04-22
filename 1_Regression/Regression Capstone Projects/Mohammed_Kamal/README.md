@@ -51,7 +51,15 @@ The deployment side features a dual-tab interface:
 ## View MLflow Dashboard:
 - mlflow ui --backend-store-uri sqlite:///mlflow.db
 
-## 🛠️ Installation & Usage
+##  watch the video
+
+<div align="center">
+  <video src='./assets/mohammed.mp4' width="100%" controls>
+  </video>
+</div>
+
+### 🎥 Project Demo
+[Click here to watch the video](./assets/mohammed.mp4)
 
 1. **Clone the project** and navigate to the directory.
 2. **Set up the environment**:
